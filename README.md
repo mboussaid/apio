@@ -41,9 +41,38 @@ apio.defaultHeaders = {
 # all methods
 ```javascript
 /// all methods
-apio.get(url,body,headers).then(response=>{},error=>{})
-apio.put(url,body,headers).then(response=>{},error=>{})
-apio.delete(url,body,headers).then(response=>{},error=>{})
-apio.post(url,body,headers).then(response=>{},error=>{})
-apio.option(url,body,headers).then(response=>{},error=>{})
+apio.get(url,body,headers)
+.then(response=>{
+ console.log(response)
+},error=>{
+console.log(error)
+})
+
+apio.put(url,body,headers)
+.then(response=>{
+ console.log(response)
+},error=>{
+console.log(error)
+})
+
+apio.delete(url,body,headers)
+.then(response=>{
+ console.log(response)
+},error=>{
+console.log(error)
+})
+
+apio.post(url,body,headers)
+.then(response=>{
+ console.log(response)
+},error=>{
+console.log(error)
+})
+
+apio.option(url,body,headers)
+.then(response=>{
+ console.log(response)
+},error=>{
+console.log(error)
+})
 ```
