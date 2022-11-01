@@ -1,0 +1,26 @@
+{
+  "name": "http.io",
+  "version": "1.0.0",
+  "description": "http requests library",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "uglifyjs src/index.js --output dist/httpIo.min.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mboussaid/http.io.git"
+  },
+  "keywords": [
+    "http",
+    "request"
+  ],
+  "author": "mohamed boussaid",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mboussaid/http.io/issues"
+  },
+  "homepage": "https://github.com/mboussaid/http.io#readme",
+  "dependencies": {
+    "uglify-js": "^3.17.4"
+  }
+}
