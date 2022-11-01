@@ -11,7 +11,7 @@ apio.get('http://127.0.0.1/api/users')
 ```
 # POST
 ```javascript
-apio.get('http://127.0.0.1/api/users',{user:''},{})
+apio.post('http://127.0.0.1/api/users',{user:''},{})
 .then(response=>{
 /// response
 },()=>{
@@ -20,7 +20,7 @@ apio.get('http://127.0.0.1/api/users',{user:''},{})
 ```
 # PUT
 ```javascript
-apio.get('http://127.0.0.1/api/lists',{title:''},{})
+apio.put('http://127.0.0.1/api/lists',{title:''},{})
 .then(response=>{
 /// response
 },()=>{
