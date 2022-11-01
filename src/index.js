@@ -2,14 +2,14 @@ const apio = {}
 const methods = ["GET","PUT","DELETE","POST","OPTION"];
 apio.defaultHeaders = {}
 methods.forEach(method=>{
-    apio[method.toLocaleLowerCase()] = function(url,payload={},headers={}){
+    apio[method.toLocaleLowerCase()] = function(url,body={},headers={}){
         return new Promise((resolve,reject)=>{
             if(!url){
                 reject(Error('[!] Missing url'));
                 return
             }
-            if(!payload || typeof payload !== "object"){
-                payload = {}
+            if(!body || typeof body !== "object"){
+                body = {}
             }
             if(!headers || typeof headers !== "object"){
                 headers = {}
@@ -20,13 +20,20 @@ methods.forEach(method=>{
                     ...apio.defaultHeaders
                 }
             }
-            fetch(url,{
-                headers:{
-                    'Content-Type':'application/json',
-                    ...headers
-                },
-                body:JSON.stringify(payload)
-            })
+            let payload = {
+                method:method
+            };
+            if(method !== "GET"){
+                payload = {
+                    method:method,
+                    headers:{
+                        'Content-Type':'application/json',
+                        ...headers
+                    },
+                    body:JSON.stringify(body)
+                }
+            }
+            fetch(url,payload)
             .then(res=>{
                 res.json().then(json=>{
                     resolve(json)
