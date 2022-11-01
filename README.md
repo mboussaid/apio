@@ -1,5 +1,6 @@
 # apio
 minimal api requests library
+
 # GET
 ```javascript
 apio.get('http://127.0.0.1/api/users')
@@ -9,6 +10,7 @@ apio.get('http://127.0.0.1/api/users')
 /// error
 })
 ```
+
 # POST
 ```javascript
 apio.post('http://127.0.0.1/api/users',{user:''},{})
@@ -18,6 +20,7 @@ apio.post('http://127.0.0.1/api/users',{user:''},{})
 /// error
 })
 ```
+
 # PUT
 ```javascript
 apio.put('http://127.0.0.1/api/lists',{title:''},{})
@@ -27,14 +30,17 @@ apio.put('http://127.0.0.1/api/lists',{title:''},{})
 /// error
 })
 ```
+
 # add default headers
 ```
 apio.defaultHeaders = {
-'authorization':'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5'
+'authorization':'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6Ik....
 }
 ```
+
+# all methods
 ```javascript
-/// all methos
+/// all methods
 apio.get(url,body,headers).then(response=>{},error=>{})
 apio.put(url,body,headers).then(response=>{},error=>{})
 apio.delete(url,body,headers).then(response=>{},error=>{})
